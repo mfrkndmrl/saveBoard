@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      <strong text-wrap>{{ders.name}}</strong>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addWeek()" color="light">
+        <strong><ion-icon name="add"></ion-icon></strong>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refresh()" color="light">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-list>
+    <!-- <ion-list-header style="font-family: Verdana, Geneva, Tahoma, sans-serif" text-wrap>
+      <strong>{{ders.name}}</strong>
+    </ion-list-header> -->
+    <ion-item-sliding *ngFor="let weeks of data">
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="../assets/imgs/calendar.png">
+        </ion-avatar>
+        <ion-option no-lines (click)="itemTapped(weeks.id,weeks.name)" ion-item>
+          <h2 text-wrap>{{weeks.name}}</h2>
+          <!-- <h3 text-wrap>{{weeks.id}}</h3>      -->
+          <ion-badge class="date" item-end color="oran">{{weeks.date | date: 'dd.MM.yyyy'}}</ion-badge>
+        </ion-option>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="danger" (click)="deleteWeek(weeks.id)">
+          <ion-icon name="trash"></ion-icon>Sil</button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button color="secondary" (click)="editWeek(weeks.id,weeks.name,weeks.lid,weeks.date)">
+          <ion-icon name="create"></ion-icon>Düzenle</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

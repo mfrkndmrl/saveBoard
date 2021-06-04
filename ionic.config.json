@@ -1,0 +1,8 @@
+{
+  "name": "SaveBoard",
+  "app_id": "5f7c359f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

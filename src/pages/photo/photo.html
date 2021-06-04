@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>{{photo.name}}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="deletePhoto(photo.id)" color="dark">
+                <ion-icon name="trash"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="shareWhatsApp(photo.path)" color="dark">
+                <ion-icon name="share"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <img [src]="photo.path">
+</ion-content>

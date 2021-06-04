@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <strong text-wrap><ion-title style="color: #fff">{{hafta.name}}</ion-title></strong>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="takePhoto(ders.id,hafta.id)" color="light">
+                <ion-icon name="camera"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="refresh()" color="light">
+                <ion-icon name="refresh"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="background">
+    <ion-searchbar [(ngModel)]="filterText" (ionInput)="getData(filterText)" placeholder="Fotoğraf Ara..." showCancelButton="false"></ion-searchbar>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let photo of data" class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-4 filter hdpe">
+                <img (tap)="tapEvent(photo.id,photo.name,photo.path)" [src]="photo.path" class="img-responsive">
+                <div class="bottom-right">{{photo.name}}</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

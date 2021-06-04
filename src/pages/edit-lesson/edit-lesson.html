@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Dersi Düzenle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background">
+    <ion-card-content>
+    <form (ngSubmit)="updateLesson()">
+        <ion-item>
+          <ion-label floating>Ders İsmi</ion-label>
+          <ion-input type="text" [(ngModel)]="data.name" name="name"></ion-input>
+        </ion-item>
+        <button ion-button type="submit" color="light" block>Güncelle</button>
+      </form>
+    </ion-card-content>
+</ion-content>

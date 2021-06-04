@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Fotoğraf Ekle
+    </ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="takePhoto()" color="dark">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+    <ion-card-content>
+  <ion-card *ngIf="base64Image">
+    <ion-card-content>
+      <h2></h2>
+      <img [src]="base64Image" />
+    </ion-card-content>
+  </ion-card>
+  <form (ngSubmit)="savePhoto()">
+    <ion-item>
+      <ion-label floating>Etiket</ion-label>
+      <ion-input type="text"[(ngModel)]="datap.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item hidden>
+      <ion-input hidden [(ngModel)]="datap.path" name="path"></ion-input>
+    </ion-item>
+    <ion-item hidden>
+      <ion-input hidden [(ngModel)]="datap.lid" name="lid"></ion-input>
+    </ion-item>
+    <ion-item hidden>
+      <ion-input hidden [(ngModel)]="datap.wid" name="wid"></ion-input>
+    </ion-item>
+    <button type="button" ion-button icon-only (click)="takePhoto()">
+      <ion-icon name="camera"></ion-icon>
+    </button>
+    <button type="button" ion-button icon-only (click)="choosePhoto()">
+      <ion-icon name="images"></ion-icon>
+    </button>
+    <button icon-start ion-button type="submit" block>
+      <ion-icon name="done-all"></ion-icon>Kaydet</button>
+  </form>
+</ion-card-content>
+</ion-content>

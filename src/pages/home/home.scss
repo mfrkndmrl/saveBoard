@@ -1,0 +1,30 @@
+page-home {
+.bg{
+    height: 100%;
+    width: 100%;
+    // background: linear-gradient(160deg,#b627f2 30%,#1ee3dd);
+    background: linear-gradient(160deg,#488aff 30%,#f4f4f4);
+    
+}
+.head{
+    position: absolute;
+    color: white;
+    display: block;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    
+}
+.head h1{
+    font-size: 7vh;
+    font-weight: lighter;
+    font-family: 'Pacifico'cursive;
+}
+.head h5{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 2px;
+    font-weight: 200;
+    font-size: 2vh;
+}
+}

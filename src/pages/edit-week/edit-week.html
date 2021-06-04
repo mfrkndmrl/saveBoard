@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Hafta Düzenle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+    <ion-card-content>
+  <form (ngSubmit)="updateWeek()">
+    <ion-item>
+      <ion-label floating>Hafta İsmi</ion-label>
+      <ion-input type="text" [(ngModel)]="data.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item hidden>
+      <ion-label floating>Ders İd</ion-label>
+      <ion-input type="number" [(ngModel)]="data.lid" name="lid"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Tarih</ion-label>   
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="data.date" name="date"></ion-datetime>
+      </ion-item>
+      <button ion-button type="submit" color="secondary" block>Güncelle</button>
+  </form>
+    </ion-card-content>
+</ion-content>

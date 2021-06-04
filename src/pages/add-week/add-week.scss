@@ -1,0 +1,22 @@
+page-add-week {
+    .background{
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(160deg,#488aff 30%,#f4f4f4);   
+        
+        // background: linear-gradient(10deg,#4e5efc,#4ee7fc);
+    }
+    ion-card-content{
+        margin-top: 2%;
+        background: rgba(230, 230, 230,0.6px);
+        border-radius: 10px;
+
+    }
+    .item{
+        background: rgba(230, 230, 230,0px);
+        color:black;
+        
+        
+       
+    }
+}
